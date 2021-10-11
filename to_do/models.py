@@ -2,9 +2,9 @@ from django.db import models
 
 class Task(models.Model):
     CHOICES = [
-            ('YES', 'Выполнено'),
-            ('PL', 'Запланировано'),
-            ('NOT', 'Отменено'),
+            ('YES', 'Done'),
+            ('PL', 'Scheduled'),
+            ('NOT', 'Canceled'),
     ]
     title = models.CharField(max_length=250)
     status = models.CharField(max_length=50, choices=CHOICES)
